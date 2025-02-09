@@ -32,8 +32,8 @@
 				{%for i in health_user%}
 				<div class="col-lg-3 col-md-4 col-6 d-block mb-4 h-100">
 					<img class="img-fluid img-rounded"
-						src="https://cornimagesbucket.s3.us-east-2.amazonaws.com/images_compressed/{{i}}"
-						alt="">
+						src="https://agro-ai-maize.s3.us-east-2.amazonaws.com/images_compressed/{{i}}"
+						alt="{{i}}">
 				</div>
 				{%endfor%}
 				<div id="imgModal" class="modal">
@@ -56,8 +56,8 @@
 				{%for i in blight_user%}
 				<div class="col-lg-3 col-md-4 col-6 d-block mb-4 h-100">
 					<img class="img-fluid img-rounded"
-						src="https://cornimagesbucket.s3.us-east-2.amazonaws.com/images_compressed/{{i}}"
-						alt="">
+						src="https://agro-ai-maize.s3.us-east-2.amazonaws.com/images_compressed/{{i}}"
+						alt="{{i}}">
 				</div>
 				{%endfor%}
 				<div id="imgModal" class="modal">
@@ -82,8 +82,8 @@
 				{%for i in range(0, healthyNum)%}
 				<div id="healthy_checkboxes" class="col-lg-3 col-md-4 col-6 d-block mb-4 h-100">
 					<img class="img-fluid img-rounded"
-						src="https://cornimagesbucket.s3.us-east-2.amazonaws.com/images_compressed/{{health_test[i]}}"
-						alt="">
+						src="https://agro-ai-maize.s3.us-east-2.amazonaws.com/images_compressed/{{health_test[i]}}"
+						alt="{{health_test[i]}}">
 					<h6 class="font-weight-normal">Individual Confidence: {{"{:.0%}".format(h_prob[i])}}
 					<h6 class="font-weight-normal">Disagree with the prediction?
 	                <input type="checkbox" name="healthy" value="{{health_test[i]}}" conf-value="{{h_prob[i]}}"><br>
@@ -111,8 +111,8 @@
 				{%for i in range(0, unhealthyNum)%}
 				<div id="unhealthy_checkboxes" class="col-lg-3 col-md-4 col-6 d-block mb-4 h-100">
 					<img class="img-fluid img-rounded"
-						src="https://cornimagesbucket.s3.us-east-2.amazonaws.com/images_compressed/{{unhealth_test[i]}}"
-						alt="">
+						src="https://agro-ai-maize.s3.us-east-2.amazonaws.com/images_compressed/{{unhealth_test[i]}}"
+						alt="{{unhealth_test[i]}}">
 					<h6 class="font-weight-normal">Individual Confidence: {{"{:.0%}".format(b_prob[i])}}
 					<h6 class="font-weight-normal">Disagree with the prediction?
 	                <input type="checkbox" name="unhealthy" value="{{unhealth_test[i]}}" conf-value="{{b_prob[i]}}"><br>

@@ -29,9 +29,12 @@ def getData():
         The data that contains the features for each image.
     """
     s3 = boto3.client('s3')
-    path = 's3://cornimagesbucket/csvOut.csv'
+    path = 's3://agro-ai-maize/csvOut.csv'
 
-    data = pd.read_csv(path, index_col = 0, header = None)
+    try:
+        data = pd.read_csv(path, index_col = 0, header = None)
+    except FileNotFoundError:
+        print('Error: ' + path + ' not found.')
     data.columns = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16']
 
     data_mod = data.astype({'8': 'int32','9': 'int32','10': 'int32','12': 'int32','14': 'int32'})
